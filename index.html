@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#190915">
+  <title>El coraz&oacute;n de Alexander</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-fire"></span>
+    <span class="orb orb-moon"></span>
+    <span class="orb orb-rose"></span>
+    <span class="moon-glow"></span>
+    <span class="star-field"></span>
+  </div>
+
+  <div id="particles" class="particles" aria-hidden="true"></div>
+
+  <main id="app" class="app-shell">
+    <section id="start-screen" class="screen screen-start is-active" aria-labelledby="start-title">
+      <div class="hero-symbol" aria-hidden="true">
+        <span class="heart-sigil">19</span>
+      </div>
+      <p class="constellation">Aries fuego &middot; C&aacute;ncer luna &middot; destino en modo travieso</p>
+      <h1 id="start-title">El coraz&oacute;n de Alexander</h1>
+      <p class="central-quote">Juntos somos la temperatura exacta donde el amor no se quema ni se enfr&iacute;a.</p>
+      <p class="hero-copy">Reina, esta no es solo una p&aacute;gina&hellip; es una aventura hecha para que juegues, descubras y sonr&iacute;as dentro de mi coraz&oacute;n.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="startAdventure">Empezar aventura &#10084;&#65039;</button>
+        <button class="btn btn-ghost" id="startFree">Entrar en modo libre</button>
+      </div>
+      <div class="hero-preview" aria-hidden="true">
+        <span>Misi&oacute;n 01</span>
+        <strong>Nuestro n&uacute;mero 19</strong>
+        <em>Destino desbloqueado</em>
+      </div>
+    </section>
+
+    <section id="menu-screen" class="screen" aria-labelledby="menu-title">
+      <header class="topbar">
+        <div>
+          <p class="microcopy">Mapa de misiones rom&aacute;nticas</p>
+          <h2 id="menu-title">Misiones del coraz&oacute;n</h2>
+        </div>
+        <button class="icon-btn" id="resetFromMenu" title="Reiniciar aventura" aria-label="Reiniciar aventura">&#8635;</button>
+      </header>
+
+      <div class="progress-panel">
+        <div class="progress-meta">
+          <span id="progressText">Progreso: 0/10</span>
+          <span id="modeText">Modo aventura</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progressFill"></span>
+        </div>
+      </div>
+
+      <label class="mode-toggle">
+        <input type="checkbox" id="freeModeToggle">
+        <span class="toggle-visual"></span>
+        <span>Modo libre</span>
+      </label>
+      <p class="mode-note" id="modeNote" hidden>Modo libre activado: puedes explorar sin completar niveles.</p>
+
+      <div id="levelGrid" class="level-grid"></div>
+    </section>
+
+    <section id="level-screen" class="screen" aria-labelledby="level-title">
+      <header class="topbar level-topbar">
+        <button class="icon-btn" id="backToMenu" title="Volver al men&uacute;" aria-label="Volver al men&uacute;">&#8249;</button>
+        <div>
+          <p class="microcopy" id="levelKicker">Nivel</p>
+          <h2 id="level-title"></h2>
+        </div>
+        <button class="icon-btn" id="resetFromLevel" title="Reiniciar aventura" aria-label="Reiniciar aventura">&#8635;</button>
+      </header>
+
+      <div class="progress-panel compact">
+        <div class="progress-meta">
+          <span id="levelProgressText">Progreso: 0/10</span>
+          <span id="levelModeText">Modo aventura</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <span id="levelProgressFill"></span>
+        </div>
+      </div>
+
+      <div id="levelContent" class="level-content"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
